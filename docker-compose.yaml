@@ -12,6 +12,8 @@ services:
       context: fluentd
     # image: fluentd:1.0.0
     init: true
+    working_dir: /fluentd
     volumes:
     - ./fluentd/etc:/fluentd/etc
+    - ./data/fluentd:/data
     # command: bash -c "while true; do sleep 30; done"
