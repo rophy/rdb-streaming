@@ -9,3 +9,8 @@ releases:
   namespace: postgresql
   chart: bitnami/postgresql
   version: 14.2.3
+- name: fluentd
+  namespace: postgresql
+  chart: bitnami/fluentd
+  version: 5.17.2
+
