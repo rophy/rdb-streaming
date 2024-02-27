@@ -6,7 +6,9 @@ services:
       POSTGRES_DATABASE: testdb
       POSTGRES_PASSWORD: passw0rd
   fluentd:
-    image: fluentd:1.0.0
+    build:
+      context: fluentd
+    # image: fluentd:1.0.0
     init: true
     volumes:
     - ./fluentd/etc:/fluentd/etc
