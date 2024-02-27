@@ -11,6 +11,5 @@ releases:
   version: 14.2.3
 - name: fluentd
   namespace: postgresql
-  chart: bitnami/fluentd
-  version: 5.17.2
-
+  chart: ./fluentd
+  version: 0.1.0
