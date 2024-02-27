@@ -5,6 +5,8 @@ services:
     environment:
       POSTGRES_DATABASE: testdb
       POSTGRES_PASSWORD: passw0rd
+    volumes:
+    - ./postgres/scripts:/scripts
   fluentd:
     build:
       context: fluentd
