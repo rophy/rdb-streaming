@@ -10,7 +10,10 @@ releases:
   chart: bitnami/postgresql
   version: 14.2.3
   values:
-  - primary:
+  - auth:
+      database: testdb
+      postgresPassword: passw0rd
+    primary:
       extraVolumeMounts:
       - name: scripts
         mountPath: /scripts
