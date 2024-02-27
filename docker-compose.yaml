@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  fluentd:
+    image: fluentd:1.0.0
+    volumes:
+    - ./fluentd:/fluentd/etc
+    command: bash -c "while true; do sleep 30; done"
