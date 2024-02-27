@@ -9,6 +9,15 @@ releases:
   namespace: postgresql
   chart: bitnami/postgresql
   version: 14.2.3
+  values:
+  - primary:
+      extraVolumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      extraVolumes:
+      - name: scripts
+        configMap:
+          name: scripts
 - name: fluentd
   namespace: postgresql
   chart: ./fluentd
