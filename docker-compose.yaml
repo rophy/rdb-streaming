@@ -1,5 +1,10 @@
 version: '3.3'
 services:
+  postgresql:
+    image: postgres:12.18-bullseye
+    environment:
+      POSTGRES_DATABASE: testdb
+      POSTGRES_PASSWORD: passw0rd
   fluentd:
     image: fluentd:1.0.0
     init: true
