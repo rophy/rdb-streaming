@@ -18,5 +18,8 @@ services:
     - ./data/fluentd:/data
     # command: bash -c "while true; do sleep 30; done"
   vector:
-    image: timberio/vector:0.36.0-debian
-    
+    image: timberio/vector:0.36.0-alpine
+    # entrypoint: bash
+    # command: ["-c", "sleep 65535"]
+    volumes:
+    - ./vector/etc:/etc/vector

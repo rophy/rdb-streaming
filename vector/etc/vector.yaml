@@ -2,13 +2,13 @@ api:
   enabled: false
   address: 0.0.0.0:8686
 sources:
-  my_source_id:
+  http:
     type: http_server
     address: 0.0.0.0:8080
 sinks:
   console:
     inputs:
-      - demo_logs
+      - http
     target: stdout
     type: console
     encoding:
